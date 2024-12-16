@@ -14,6 +14,7 @@ import Institution from './pages/Institution';
 import Partnerships from './pages/Partnerships';
 import ReferAndEarn from './pages/ReferAndEarn';
 import StudentLoans from './pages/StudentLoans';
+import SearchPage from './components/search/SearchPage';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/news" element={<News />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/search" element={<SearchPage />} />
           </Routes>
         </main>
         <Footer />

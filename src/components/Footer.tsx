@@ -55,8 +55,13 @@ export default function Footer() {
           
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">About Us</h3>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
+              <li>
+                <Link to="/study-search" className="text-gray-400 hover:text-white transition-colors">
+                  Study & Scholarship Search
+                </Link>
+              </li>
               <li>
                 <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
                   About Jestone

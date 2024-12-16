@@ -14,6 +14,8 @@ export default function Navbar() {
       href: '/about',
       submenu: [
         { label: 'About Jestone', href: '/about' },
+        { label: 'Study & Scholarship Search', href: '/study-search' },
+        { label: 'Search Page', href: '/search' },
         { label: 'Partnerships', href: '/partnerships' },
         { label: 'Refer and Earn', href: '/refer-and-earn' },
         { label: 'Study Loans', href: '/student-loans' }
@@ -69,7 +71,7 @@ export default function Navbar() {
                 )}
 
                 {item.submenu && (
-                  <div className={`absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 ${
+                  <div className={`absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 ${
                     openSubmenu === item.label ? 'block' : 'hidden group-hover:block'
                   }`}>
                     {item.submenu.map((subItem) => (
