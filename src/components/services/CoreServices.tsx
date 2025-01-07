@@ -1,49 +1,30 @@
+import { Link } from 'react-router-dom';
 import { GraduationCap, Globe, FileText, Briefcase } from 'lucide-react';
 
-const coreServices = [
+const services = [
   {
     icon: GraduationCap,
     title: 'Academic Counseling',
     description: 'Expert guidance for course selection and university admissions',
-    features: [
-      'Personalized program recommendations',
-      'University selection assistance',
-      'Application strategy planning',
-      'Document preparation support'
-    ]
+    url: '/services/academic-counseling'
   },
   {
     icon: Globe,
     title: 'Visa Assistance',
     description: '99% success rate in student visa applications',
-    features: [
-      'Visa requirement analysis',
-      'Documentation preparation',
-      'Interview preparation',
-      'Application tracking'
-    ]
+    url: '/services/visa-assistance'
   },
   {
     icon: FileText,
     title: 'Test Preparation',
     description: 'Comprehensive preparation for IELTS, TOEFL, and other tests',
-    features: [
-      'Personalized study plans',
-      'Practice tests and materials',
-      'Expert instructors',
-      'Score improvement guarantee'
-    ]
+    url: '/services/test-preparation'
   },
   {
     icon: Briefcase,
     title: 'Career Support',
     description: 'Career guidance and placement assistance',
-    features: [
-      'Career path planning',
-      'Resume building',
-      'Interview preparation',
-      'Job placement support'
-    ]
+    url: '/services/career-support'
   }
 ];
 
@@ -59,25 +40,22 @@ export default function CoreServices() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {coreServices.map((service, index) => (
-            <div
+          {services.map((service, index) => (
+            <Link
               key={index}
+              to={service.url}
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              aria-label={`Learn more about ${service.title}`}
             >
               <service.icon className="w-12 h-12 text-primary-500 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {service.title}
               </h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              <ul className="space-y-2">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-2" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <span className="text-primary-500 font-medium inline-flex items-center">
+                Learn More →
+              </span>
+            </Link>
           ))}
         </div>
       </div>

@@ -4,6 +4,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import AcademicCounseling from './pages/services/AcademicCounseling';
+import VisaAssistance from './pages/services/VisaAssistance';
 import Programs from './pages/Programs';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -26,6 +28,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/academic-counseling" element={<AcademicCounseling />} />
+            <Route path="/services/visa-assistance" element={<VisaAssistance />} />
             <Route path="/programs" element={<Programs />} />
             <Route path="/study-destinations" element={<StudyDestinations />} />
             <Route path="/institutions/:id" element={<Institution />} />
