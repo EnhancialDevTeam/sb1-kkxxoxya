@@ -21,7 +21,16 @@ export default function Navbar() {
         { label: 'Study Loans', href: '/student-loans' }
       ]
     },
-    { label: 'Services', href: '/services' },
+    {
+      label: 'Services',
+      href: '/services',
+      submenu: [
+        { label: 'Academic Counseling', href: '/services/academic-counseling' },
+        { label: 'Career Counseling', href: '/services/career-counseling' },
+        { label: 'Test Preparation', href: '/services/test-preparation' },
+        { label: 'Visa Assistance', href: '/services/visa-assistance' }
+      ]
+    },
     { label: 'Programs & Courses', href: '/programs' },
     { label: 'Study Destinations', href: '/study-destinations' },
     { label: 'Blog', href: '/blog' },
